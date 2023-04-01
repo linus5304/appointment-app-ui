@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://use.fontawesome.com/2141b948d9.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="app.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "app-red": "#e42312",
+                        "app-pink": "#e93e69",
+                        "app-orange": "#ff6101",
+                        "app-blue": "#1d3085",
+                    },
+                    fontFamily: {
+                        "montserrat-alternates": ["Montserrat Alternates"],
+                        "nunito-sans": ["Nunito Sans"],
+                        "roboto": ["Roboto"]
+                    },
+                },
+            },
+        }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+</head>
+
+<body class="font-nunito-sans">
+    <div class="flex h-screen ">
+        <div class="flex flex-col w-1/5 bg-gray-100 px-8 pt-4 pb-8 bg-gray-100 space-y-4">
+            <div class="flex space-x-2 items-center">
+                <img src="./logo50.png" alt="">
+                <div class="font-bold">AApointments</div>
+            </div>
+            <div class="flex-1 text-[18px] space-y-8">
+                <div class="flex space-x-2 items-center">
+                    <div class="px-2 py-[2px] rounded-full bg-gray-200"><i class="fa fa-home text-gray-400"
+                            aria-hidden="true"></i>
+                    </div>
+                    <div class="font-semibold">Home</div>
+                </div>
+                <div class="flex space-x-2 items-center">
+                    <div class="px-2 py-[2px] rounded-full bg-gray-200"><i class="fa fa-comments text-gray-400"
+                            aria-hidden="true"></i>
+
+                    </div>
+                    <div class="font-semibold">Messages</div>
+                </div>
+                <!-- <div class="flex space-x-2 items-center">
+                    <div class="px-2 py-[2px] rounded-full bg-gray-200"><i class="fa fa-bell-o text-gray-400"
+                            aria-hidden="true"></i>
+
+                    </div>
+                    <div class="font-semibold">Notifications</div>
+                    <div class="px-2 py-[2px] rounded-full bg-app-blue text-white font-semibold text-sm">9</div>
+                </div> -->
+                <div class="flex space-x-2 items-center">
+                    <div class="px-2 py-[2px] rounded-full bg-gray-200"><i class="fa fa-tasks text-gray-400"
+                            aria-hidden="true"></i>
+
+                    </div>
+                    <div class="font-semibold">Appointments</div>
+                </div>
+                <div class="flex space-x-2 items-center">
+                    <div class="px-2 py-[2px] rounded-full bg-gray-200"><i class="fa fa-file-o text-gray-400"
+                            aria-hidden="true"></i>
+
+                    </div>
+                    <div class="font-semibold">Wishlist</div>
+                </div>
+                <div class="flex space-x-2 items-center">
+                    <div class="px-3 py-[3px] rounded-full bg-gray-200"><i class="fa fa-question text-gray-400"
+                            aria-hidden="true"></i>
+
+                    </div>
+                    <div class="font-semibold">Help</div>
+                </div>
+                <div class="flex space-x-2 items-center">
+                    <div class="px-2 py-[2px] rounded-full bg-gray-200"><i class="fa fa-sign-out text-gray-400"
+                            aria-hidden="true"></i>
+
+                    </div>
+                    <div class="font-semibold">Logout</div>
+                </div>
+            </div>
+            <div class="bg-[#1d3085] flex flex-col items-center space-y-4 py-4 rounded-md">
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div class="text-center text-[18px]">
+                    <div class="text-white font-bold text-2xl">Support Ukranine</div>
+                    <div class="text-gray-200 ">Help win the war against terrorist Federation</div>
+                </div>
+                <div class="">
+                    <button class="px-4 font-bold bg-gray-100 py-2 rounded-full">Move and donate 🤝</button>
+                </div>
+            </div>
+        </div>
+        <div class="w-4/5">
+            <div class="flex items-center justify-between border-b h-20 px-4">
+                <div class="relative w-[30%]">
+                    <div class="flex items-center">
+                        <input type="text" class="h-10 rounded-full bg-gray-200 border-gray-400 w-full"
+                            placeholder="Start looking...">
+                        <div
+                            class="bg-app-blue rounded-full px-4 py-0 absolute inset-y-0 right-0 flex items-center pl-2">
+                            <i class="fa fa-search text-lg text-white pl-2" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <div class="bg-gray rounded-full px-4 py-2 bg-gray-300 font-semibold">
+                        Become a Host
+                    </div>
+                    <div class="border border-gray-200 rounded-full px-2 py-[3px]">
+                        <i class="fa fa-globe text-3xl text-gray-400" aria-hidden="true"></i>
+                    </div>
+                    <div class="">
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-gray-200 px-4 py-[9px] rounded-full">
+                                <i class="fa fa-user text-2xl" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Angelina Plisko</div>
+                                <div class="font-semibold text-gray-400">Settings</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-8 space-y-4">
+                <div
+                    class="text-4xl font-bold text-white  text-center bg-app-blue  flex justify-center items-center w-full h-60 rounded-md">
+                    <div class="w-[500px]">Book appointments online with ease.</div>
+                </div>
+                <div class="flex">
+                    <div class="space-x-2 flex-1">
+                        <span class="bg-app-blue px-6 py-2 rounded-full text-white font-semibold">
+                            😎 All
+                        </span>
+                        <span class="bg-gray-200 px-6 py-2 rounded-full text-gray-500 font-semibold">
+                            😛 Popular
+                        </span>
+                        <span class="bg-gray-200 px-6 py-2 rounded-full text-gray-500 font-semibold">
+                            😧 Recommended
+                        </span>
+                        <span class="bg-gray-200 px-6 py-2 rounded-full text-gray-500 font-semibold">
+                            ✊ Nearest
+                        </span>
+                    </div>
+                    <div class="space-x-2">
+                        <span class="bg-gray-200 px-6 py-2 rounded-full text-gray-500 font-semibold">
+                            😧 Recommended
+                        </span>
+                        <span class="bg-app-blue px-6 py-2 rounded-full text-white font-semibold">
+                            ✊ Nearest
+                        </span>
+                    </div>
+                </div>
+                <div class="flex space-x-4">
+                    <div class="lg:w-1/4 md:w-1/2 w-full  border border-gray-200">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://images.pexels.com/photos/7018399/pexels-photo-7018399.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        </a>
+                        <div class="mt-4 p-2">
+                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                          <h2 class="text-gray-900 title-font text-lg font-medium">Classic</h2>
+                          <p class="mt-1">$2000.00</p>
+                        </div>
+                      </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full  border border-gray-200">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://images.pexels.com/photos/4946438/pexels-photo-4946438.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        </a>
+                        <div class="mt-4 p-2">
+                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                          <h2 class="text-gray-900 title-font text-lg font-medium">Neutral</h2>
+                          <p class="mt-1">$1200.00</p>
+                        </div>
+                      </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full  border border-gray-200">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://images.pexels.com/photos/7005292/pexels-photo-7005292.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        </a>
+                        <div class="mt-4 p-2">
+                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                          <h2 class="text-gray-900 title-font text-lg font-medium">Hyper</h2>
+                          <p class="mt-1">$3200.00</p>
+                        </div>
+                      </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full  border border-gray-200">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://images.pexels.com/photos/7534545/pexels-photo-7534545.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        </a>
+                        <div class="mt-4 p-2">
+                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                          <h2 class="text-gray-900 title-font text-lg font-medium">Classic</h2>
+                          <p class="mt-1">$2500.00</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="flex space-x-4">
+                    <div class="lg:w-1/4 md:w-1/2 w-full  border border-gray-200">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://images.pexels.com/photos/7018399/pexels-photo-7018399.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        </a>
+                        <div class="mt-4 p-2">
+                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                          <h2 class="text-gray-900 title-font text-lg font-medium">Classic</h2>
+                          <p class="mt-1">$2000.00</p>
+                        </div>
+                      </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full  border border-gray-200">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://images.pexels.com/photos/4946438/pexels-photo-4946438.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        </a>
+                        <div class="mt-4 p-2">
+                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                          <h2 class="text-gray-900 title-font text-lg font-medium">Neutral</h2>
+                          <p class="mt-1">$1200.00</p>
+                        </div>
+                      </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full  border border-gray-200">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://images.pexels.com/photos/7005292/pexels-photo-7005292.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        </a>
+                        <div class="mt-4 p-2">
+                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                          <h2 class="text-gray-900 title-font text-lg font-medium">Hyper</h2>
+                          <p class="mt-1">$3200.00</p>
+                        </div>
+                      </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full  border border-gray-200">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://images.pexels.com/photos/7534545/pexels-photo-7534545.jpeg?auto=compress&cs=tinysrgb&w=800">
+                        </a>
+                        <div class="mt-4 p-2">
+                          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">CATEGORY</h3>
+                          <h2 class="text-gray-900 title-font text-lg font-medium">Classic</h2>
+                          <p class="mt-1">$2500.00</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
